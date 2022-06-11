@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .banner
+    {
+    padding-top: 250px;
+    width:100%;
+    height: 1200px;
+    background-repeat: no-repeat;
+    background-image: url("../homework4/img/bg.png");
+    }
+    .form
+    {
+    padding: 13px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px
+    }
+    input[type=text], input[type=password],input[type=date] {
+    padding:8px 14px;
+    width:200px;
+    border-radius:5px;
+    border: 1px #cccccc solid;
+}
+.Button {
+    background-color:#44c767;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.Button:hover {
+    background-color:#5cbf2a;
+}
+.Button:active {
+    position:relative;
+    top:1px;
+}
+    </style>
+</head>
+<body>
+ <div class="banner">
+    <form>
+        <div class="form">
+            <h2 style="color:white">Sign up</h2>
+            <p><input type="text"  name="name" value="" placeholder="Your name"></p>
+            <p><input type="date"  name="datemax" value=""></p>
+            <p><input type="text"  name="email" value="" placeholder="Your email"></p>
+            <p><input type="password"  name="password" value=""placeholder="Password"></p>
+            <p style="color: white"><input type="checkbox" name="agree"> I agree all statements in <a href="#">Terms of service</a></p>
+            <button class="Button">Sign up</button>
+        </div>
+      </form>
+ </div>   
+
+
+</body>
+</html>
