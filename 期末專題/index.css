@@ -1,0 +1,145 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../期末專題/img/bg.png');
+}
+
+.grid {
+  width: 300px;
+  height: 600px;
+  background-color: #111;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  height: 30px;
+  width: 30px;
+}
+
+#container {
+  margin-top: 10vh;
+  border: #333 7px solid;
+  display: flex;
+  border-radius: 2%;
+}
+
+.tetromino {    
+  border: solid 3px;
+  border-color: white gray gray white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mini-grid {
+  margin: 0px 50px 10px 50px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini-grid div {
+  height: 30px;
+  width: 30px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #333 2px solid;
+}
+
+h2 {
+  border: #333 4px solid;
+  border-radius:20px;
+  padding: 10px 25px 10px 25px;
+  font-family:Pixel ,Arial ,Helvetica, sans-serif;
+  color:white;
+}
+
+h3 {
+  border: #333 4px solid;
+  border-radius:20px;
+  padding: 10px 15px 10px 15px;
+  font-family:Pixel ,Arial ,Helvetica, sans-serif;
+  color:white;
+}
+
+#start-button {
+  position: relative;
+  box-sizing:border-box;
+  padding:20px;
+  min-height:30px;
+  width: 130px;
+  border-radius:20px;
+  border:none;
+  color:white;
+  background:#333;
+  font-family:Pixel ,Arial ,Helvetica, sans-serif;
+  font-size:0.5nem;
+  outline:none;
+  cursor:pointer;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 15px;
+
+}
+
+#start-button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#start-button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.controller {
+  display: flex;
+  background-color: gainsboro;
+  justify-content: center;
+  padding: 5px 10px 15px 10px;  
+}
+
+@media (max-width: 768px) {
+  .info {
+    display: none;
+  }
+
+  .intro {    
+    justify-content: center;
+  }
+  
+  #container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .controller {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family:'Pixel';
+  src: url('../期末專題/font/Pixel-LCD-7.woff') format('woff');
+}
