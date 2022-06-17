@@ -58,7 +58,8 @@ const view = {
 }
 
 const controller = {
-  displayGame() {
+  
+    displayGame() {
     model.initiGame()
     view.draw()
     model.createNextNextTetromino()
@@ -68,7 +69,8 @@ const controller = {
     model.timerId = setInterval(this.moveDown, model.speed)
     this.pause()
   },
-  moveDown() {
+ //向下 
+    moveDown() {
     const currentPosition = model.currentPosition
     const current = model.currentTetromino
     const squares = model.squares
@@ -82,14 +84,15 @@ const controller = {
       view.draw()
     }
   },
-  rush(event) {
+  //按住向下
+    rush(event) {
     switch (event.keyCode) {
       case 40:
         controller.moveDown()
         break;
     }
   },
-  freeze() {
+    freeze() {
     const currentPosition = model.currentPosition
     const width = model.width
     const current = model.currentTetromino
@@ -106,7 +109,8 @@ const controller = {
       this.gameOver()
     }
   },
-  moveLeft() {
+  //向左 
+    moveLeft() {
     const current = model.currentTetromino
     const width = model.width
     const squares = model.squares
@@ -120,6 +124,7 @@ const controller = {
       view.draw()
     }
   },
+  //向右
   moveRight() {
     const width = model.width
     const squares = model.squares
@@ -133,6 +138,7 @@ const controller = {
       view.draw()
     }
   },
+  //按上旋轉
   rotate() {
     const width = model.width
     const squares = model.squares
@@ -184,6 +190,7 @@ const controller = {
         break;
     }
   },
+  //暫停
   pause() {
     const startBtn = document.getElementById('start-button')
     startBtn.addEventListener('click', () => {
