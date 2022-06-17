@@ -37,7 +37,7 @@ const view = {
       displaySquares[1 + index].style.backgroundColor = model.colors[model.nextIndex]
     })
   },
-  //移動俄羅斯方塊
+  
   checkAndRemoveGrids() {
     for (let i = 0; i < 200; i += model.width) {
       const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9]
