@@ -1,3 +1,4 @@
+//繪製俄羅斯方塊背景大小
 const view = {
   creatGirds() {
     const grid = document.querySelector('.grid')
@@ -10,7 +11,7 @@ const view = {
       }
     }
     grid.innerHTML = girds
-    const miniGrid = document.querySelector('.mini-grid')
+    const miniGrid = document.querySelector('.mini-grid') 
     miniGrids = ''
     for (let j = 0; j < 16; j++) {
       miniGrids += '<div class=""></div>'
@@ -36,6 +37,7 @@ const view = {
       displaySquares[1 + index].style.backgroundColor = model.colors[model.nextIndex]
     })
   },
+  //移動俄羅斯方塊
   checkAndRemoveGrids() {
     for (let i = 0; i < 200; i += model.width) {
       const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9]
@@ -211,7 +213,7 @@ const controller = {
     }
   }
 }
-
+//俄羅斯方塊的形狀跟顏色
 const model = {
   tetrominoes(width = this.width) {
     const tetrominoJ = [
