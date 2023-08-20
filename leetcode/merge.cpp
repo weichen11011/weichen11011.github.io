@@ -4,9 +4,8 @@ using namespace std;
 class Solution{
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        int ans = m + n;
         int count = 0;
-        for(int i =m;i<ans;i++){
+        for(int i =m;i<m+n;i++){
             nums1[i] = nums2[count];
             count+=1;
         }
